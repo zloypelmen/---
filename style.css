@@ -1,0 +1,20 @@
+.event-card {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: calc(14.28% - 20px);
+    font-size: 1vw; 
+  }
+  
+  .event-card img {
+    max-width: 100%; /* Изображение не превышает ширину контейнера */
+    height: auto; /* Сохраняет соотношение сторон изображения */
+  }
+  
+  .calendar-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Равномерное распределение карточек */
+    margin: -10px; /* Учет отступов карточек */
+  }
