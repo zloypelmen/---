@@ -9,7 +9,6 @@ const EventCard = ({ photoUrl, date, eventTheme, organizerName }) => {
   );
 };
 
-// Компонент для отображения всей таблицы календаря
 const CalendarTable = ({ user, events }) => {
   return React.createElement('div', null,
     React.createElement('h2', null, `${user}'s Calendar`),
@@ -20,7 +19,7 @@ const CalendarTable = ({ user, events }) => {
     )
   );
 };
-  // отрисовываем компонент
+
   const user = 'Иван';
   const events = [
     {
@@ -227,10 +226,6 @@ const CalendarTable = ({ user, events }) => {
         eventTheme: 'Зоопарк',
         organizerName: 'Константин Синицин',
     },
-    
-  
-  
-    
   ];
   
   ReactDOM.render(
