@@ -9,16 +9,25 @@ const EventCard = ({ photoUrl, date, eventTheme, organizerName }) => {
   );
 };
 
+
 const CalendarTable = ({ user, events }) => {
-  return React.createElement('div', null,
-    React.createElement('h2', null, `${user}'s Calendar`),
-    React.createElement('div', { className: 'calendar-cards' },
-      events.map((event, index) =>
-        React.createElement(EventCard, { key: index, ...event })
+    const weekdays = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'];
+  
+    return React.createElement('div', { className: 'calendar-table' },
+      React.createElement('h2', null, `${user}'s Calendar`),
+      React.createElement('div', { className: 'weekdays' },
+        weekdays.map((day, index) =>
+          React.createElement('div', { key: index, className: 'weekday' }, day)
+        )
+      ),
+      React.createElement('div', { className: 'calendar-cards' },
+        events.map((event, index) =>
+            React.createElement(EventCard, { ...event })
+          )
+        )
       )
-    )
-  );
-};
+    
+  };    
 
   const user = 'Иван';
   const events = [

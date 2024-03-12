@@ -1,20 +1,29 @@
 .event-card {
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    width: calc(14.28% - 20px);
-    font-size: 1vw; 
-  }
-  
-  .event-card img {
-    max-width: 100%; 
-    height: auto; 
-  }
-  
-  .calendar-cards {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: calc(14.28% - 20px);
+  font-size: 1vw; 
+}
+
+.event-card img {
+  max-width: 100%; 
+  height: auto; 
+}
+
+.calendar-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  margin: -10px; 
+}
+  .weekdays {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    margin: -10px; 
   }
+  
+  .weekday {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
